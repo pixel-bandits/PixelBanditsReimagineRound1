@@ -110,7 +110,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="panel flex flex-col">
+      {/* <div className="panel flex flex-col">
         <h2 className="section-heading text-xl font-semibold lg:text-3xl">
           Senior Management
         </h2>
@@ -126,7 +126,7 @@ const About = () => {
         <div className="mentor-card"></div>
         <div className="mentor-card"></div>
         <div className="mentor-card"></div>
-      </div>
+      </div> */}
     </>
   );
 };
