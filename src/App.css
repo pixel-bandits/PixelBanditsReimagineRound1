@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap");
+
 * {
   color: aliceblue;
   background-color: black;
 }
 .btn {
   color: black;
-  background-color: rgb(139, 141, 231);
+  background-color: #8b8de7;
   padding: 10px 25px;
   font-size: 1rem;
   font-weight: 500;
@@ -17,4 +19,18 @@
 }
 .panel > div {
   flex: 1;
+}
+.icon {
+  /*given to one of the social icons*/
+  margin: 0 20px;
+}
+.hover {
+  color: white;
+}
+.hover:hover {
+  color: #8b8de7;
+  cursor: pointer;
+}
+li {
+  margin: 15px 0;
 }
