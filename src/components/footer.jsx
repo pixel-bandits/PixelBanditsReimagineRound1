@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="panel">
+    <div className="panel h-fit">
       <div className="container mx-auto px-4 py-8">
         <div className="cta w-full md:w-2/3 lg:w-1/2 mx-auto text-center">
           <h3 className="text-xl font-semibold my-5">

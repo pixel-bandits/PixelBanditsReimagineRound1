@@ -9,9 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const el = useRef(null);
-  const img = useRef(null);
-  const aboutImg = useRef(null);
   useGSAP(() => {
+    //panel effect
     gsap.utils.toArray(".panel").forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
@@ -39,31 +38,14 @@ const About = () => {
       typed.destroy();
     };
   }, []);
-  useEffect(() => {
-    const image = img.current;
-    gsap.fromTo(
-      image,
-      {
-        opacity: 0,
-        scale: 0.2,
-        y: -20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 1,
-        ease: "none",
-      }
-    );
-  }, []);
+
   return (
     <>
       <h1
         ref={el}
-        className="text-2xl lg:text-4xl font-semibold h-[10vh] text-center"
+        className="text-3xl lg:text-4xl font-semibold h-[10vh] text-center"
       ></h1>
-      <div className="panel">
+      <div className="panel flex-col md:flex-row md:h-fit">
         <div className="team-img">
           <img
             src="https://www.titancompany.in/sites/default/files/Overview%20sample%202.png"
@@ -87,13 +69,12 @@ const About = () => {
         </div>
       </div>
 
-      <div className="panel">
-        <div className="about-img" ref={aboutImg}>
+      <div className="panel flex-col md:flex-row items-center md:gap-10 md:h-fit">
+        <div className="about-img">
           <img
             src="/about-watch-img.jpg"
-            className="h-[700px]"
-            ref={img}
-            alt=""
+            className="h-2/3 md:h-3/4"
+            alt="watch image"
           />
         </div>
         <div className="about-details flex flex-col justify-center items-start">
@@ -109,24 +90,6 @@ const About = () => {
           <button className="btn">Read More</button>
         </div>
       </div>
-
-      {/* <div className="panel flex flex-col">
-        <h2 className="section-heading text-xl font-semibold lg:text-3xl">
-          Senior Management
-        </h2>
-        <div className="mentor-card">
-          <div className="mentor-img">
-            <img src="https://picsum.photos/id/173/200/300.webp" alt="" />
-          </div>
-          <div className="mentor-name"></div>
-          <div className="mentor-desc"></div>
-        </div>
-        <div className="mentor-card"></div>
-        <div className="mentor-card"></div>
-        <div className="mentor-card"></div>
-        <div className="mentor-card"></div>
-        <div className="mentor-card"></div>
-      </div> */}
     </>
   );
 };
