@@ -51,7 +51,7 @@ const About = () => {
             className="w-4/5 object-center"
           />
         </div>
-        <div className="team-details flex flex-col justify-start mb-14 h-auto items-center flex-1 p-4">
+        <div className="team-details flex flex-col justify-start mb-10 h-auto items-center flex-1 p-4">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Titan Overview
           </h2>
@@ -70,7 +70,11 @@ const About = () => {
 
       <div className="about-panel flex flex-col sm:flex-row items-center justify-center sm:gap-10 h-auto mb-16 gap-4 p-4">
         <div className="about-img flex-1  flex justify-center">
-          <img src="/about-watch-img.jpg" className="w-1/2" alt="watch image" />
+          <img
+            src="/about-watch-img.jpg"
+            className="w-1/2 md:w-full"
+            alt="watch image"
+          />
         </div>
         <div className="about-details flex flex-col justify-center items-center flex-1">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
