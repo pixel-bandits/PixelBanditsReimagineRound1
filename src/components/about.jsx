@@ -43,7 +43,7 @@ const About = () => {
         ref={el}
         className="text-2xl lg:text-4xl font-semibold h-[10vh] text-center mt-14 "
       ></h1>
-      <div className="about-panel flex flex-col sm:flex-row sm:h-auto mb-16 gap-3 items-center p-4">
+      <div className="about-panel flex flex-col sm:flex-row sm:h-auto mb-16 items-center p-4">
         <div className="team-img flex justify-center">
           <img
             src="https://www.titancompany.in/sites/default/files/Overview%20sample%202.png"
@@ -76,15 +76,18 @@ const About = () => {
             alt="watch image"
           />
         </div>
-        <div className="about-details flex flex-col justify-center items-center h-auto flex-1">
+        <div className="about-details flex flex-col justify-center items-center h-auto flex-1 bg-black">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Our Heritage
           </h2>
-          <div className="mb-10  text-justify">
+          <div className="mb-10  text-justify bg-black">
             A journey of over 30 years that saw Titan Watch Project becoming
             Titan Watches, to Titan Industries, and to what’s today known as the
             Titan Company Limited. With hitting the 15 million mark every year
-            in production, each year saw new technologies and innovations.
+            in production, each year saw new technologies and innovations. The
+            company's commitment to quality and excellence has made it a trusted
+            name in the industry. Titan continues to set new benchmarks in
+            design and craftsmanship, reflecting its enduring legacy.
           </div>
           <button className="btn">Read More</button>
         </div>
