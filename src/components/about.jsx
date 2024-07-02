@@ -43,44 +43,40 @@ const About = () => {
         ref={el}
         className="text-2xl lg:text-4xl font-semibold h-[10vh] text-center mt-14 "
       ></h1>
-      <div className="about-panel flex flex-col md:flex-row md:h-auto mb-16 gap-4 p-4">
-        <div className="team-img flex-1">
+      <div className="about-panel flex flex-col sm:flex-row sm:h-auto mb-16 gap-3 items-center p-4">
+        <div className="team-img flex justify-center">
           <img
             src="https://www.titancompany.in/sites/default/files/Overview%20sample%202.png"
             alt="Team Image"
-            className="w-full h-auto"
+            className="w-4/5 object-center"
           />
         </div>
-        <div className="team-details flex flex-col justify-center items-start flex-1 p-4">
+        <div className="team-details flex flex-col justify-start mb-14 h-auto items-center flex-1 p-4">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Titan Overview
           </h2>
-          <div className="my-3 text-justify">
+          <div className=" text-justify mb-10">
             Titan is India's leading lifestyle company and among the most
             admired and respected corporates in the country. Titan has come a
             long way since 1984 when we started with one product category.
-            Today, with over 8,000 employees and about 38,000 in the overall
+            {/* Today, with over 8,000 employees and about 38,000 in the overall
             Titan ecosystem, 16 brands and over 2,000 retail stores, we are as
             committed as ever to delivering profitable and responsible growth
-            for all our stakeholders.
+            for all our stakeholders. */}
           </div>
           <button className="btn">Read More</button>
         </div>
       </div>
 
-      <div className="about-panel flex flex-col md:flex-row items-center md:gap-10 md:h-auto mb-16 gap-4 p-4">
-        <div className="about-img flex-1">
-          <img
-            src="/about-watch-img.jpg"
-            className="w-full h-auto"
-            alt="watch image"
-          />
+      <div className="about-panel flex flex-col sm:flex-row items-center justify-center sm:gap-10 h-auto mb-16 gap-4 p-4">
+        <div className="about-img flex-1  flex justify-center">
+          <img src="/about-watch-img.jpg" className="w-1/2" alt="watch image" />
         </div>
-        <div className="about-details flex flex-col justify-center items-start flex-1">
+        <div className="about-details flex flex-col justify-center items-center flex-1">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Our Heritage
           </h2>
-          <div className="my-3 text-justify">
+          <div className="mb-10  text-justify">
             A journey of over 30 years that saw Titan Watch Project becoming
             Titan Watches, to Titan Industries, and to what’s today known as the
             Titan Company Limited. With hitting the 15 million mark every year
