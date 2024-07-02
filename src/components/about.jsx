@@ -43,7 +43,7 @@ const About = () => {
         ref={el}
         className="text-2xl lg:text-4xl font-semibold h-[10vh] text-center mt-14 "
       ></h1>
-      <div className="about-panel flex flex-col sm:flex-row sm:h-auto mb-16 items-center p-4">
+      <div className="about-panel flex flex-col sm:flex-row sm:h-auto mb-16 items-center p-4 bg-black">
         <div className="team-img flex justify-center">
           <img
             src="https://www.titancompany.in/sites/default/files/Overview%20sample%202.png"
@@ -59,16 +59,12 @@ const About = () => {
             Titan is India's leading lifestyle company and among the most
             admired and respected corporates in the country. Titan has come a
             long way since 1984 when we started with one product category.
-            {/* Today, with over 8,000 employees and about 38,000 in the overall
-            Titan ecosystem, 16 brands and over 2,000 retail stores, we are as
-            committed as ever to delivering profitable and responsible growth
-            for all our stakeholders. */}
           </div>
           <button className="btn">Read More</button>
         </div>
       </div>
 
-      <div className="about-panel flex flex-col sm:flex-row items-center justify-center sm:gap-10 h-auto mb-16 gap-4 p-4">
+      <div className="about-panel flex flex-col sm:flex-row items-center justify-center sm:gap-10 h-auto mb-16 gap-4 p-5">
         <div className="about-img flex-1  flex justify-center">
           <img
             src="/about-watch-img.jpg"
