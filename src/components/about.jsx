@@ -64,8 +64,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about-panel flex flex-col sm:flex-row items-center justify-center sm:gap-10 h-auto mb-16 gap-4 p-5 bg-black">
-        <div className="about-img flex-1  flex justify-center">
+      <div className="about-panel flex flex-col sm:flex-row items-center justify-center sm:gap-10 h-auto mb-16 gap-4 p-6 bg-black">
+        <div className="about-img flex-1  flex justify-center bg-black">
           <img
             src="/about-watch-img.jpg"
             className="w-1/2 md:w-full"
