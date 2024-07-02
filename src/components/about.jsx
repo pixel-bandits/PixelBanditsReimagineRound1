@@ -41,9 +41,9 @@ const About = () => {
     <>
       <h1
         ref={el}
-        className="text-2xl lg:text-4xl font-semibold h-[10vh] text-center mt-12"
+        className="text-2xl lg:text-4xl font-semibold h-[10vh] text-center mt-14 "
       ></h1>
-      <div className="about-panel flex flex-col md:flex-row md:h-auto gap-4 p-4">
+      <div className="about-panel flex flex-col md:flex-row md:h-auto mb-16 gap-4 p-4">
         <div className="team-img flex-1">
           <img
             src="https://www.titancompany.in/sites/default/files/Overview%20sample%202.png"
@@ -68,7 +68,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about-panel flex flex-col md:flex-row items-center md:gap-10 md:h-auto gap-4 p-4">
+      <div className="about-panel flex flex-col md:flex-row items-center md:gap-10 md:h-auto mb-16 gap-4 p-4">
         <div className="about-img flex-1">
           <img
             src="/about-watch-img.jpg"
@@ -76,7 +76,7 @@ const About = () => {
             alt="watch image"
           />
         </div>
-        <div className="about-details flex flex-col justify-center items-start flex-1 p-4">
+        <div className="about-details flex flex-col justify-center items-start flex-1">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Our Heritage
           </h2>
