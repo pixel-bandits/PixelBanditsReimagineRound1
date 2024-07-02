@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="panel h-ful z-[999]">
+    <div className="panel h-fit">
       <div className="container mx-auto px-4 py-8">
         <div className="cta w-full md:w-2/3 lg:w-1/2 mx-auto text-center">
           <h3 className="text-xl font-semibold my-5">
@@ -21,7 +21,7 @@ const Footer = () => {
               type="email"
               id="email"
               placeholder="Email"
-              className="border-b-neutral-400 border-b-[1px] py-2 focus:outline-none w-full md:w-2/3"
+              className="border-b-neutral-400 bg-black border-b-[1px] py-2 focus:outline-none w-full md:w-2/3"
             />
             <button className="btn w-full md:w-auto">Subscribe</button>
           </div>
@@ -70,26 +70,46 @@ const Footer = () => {
           <div className="socials">
             <h4 className="text-lg font-semibold mb-4">Follow us</h4>
             <div className="flex gap-4 justify-center md:justify-start">
-              <FontAwesomeIcon
-                icon={faFacebook}
-                size="lg"
-                className="hover:text-blue-600"
-              />
-              <FontAwesomeIcon
-                icon={faInstagram}
-                size="lg"
-                className="hover:text-pink-600"
-              />
-              <FontAwesomeIcon
-                icon={faXTwitter}
-                size="lg"
-                className="hover:text-blue-500"
-              />
-              <FontAwesomeIcon
-                icon={faYoutube}
-                size="lg"
-                className="hover:text-red-600"
-              />
+              <a
+                href="https://www.facebook.com/titanwatches?sessionId=f99e5b46-2fe9-46f2-95b0-b66f7174f93d.5743f3f6-7c20-4590-821b-0b540f0570d3&jarvisId=4eead67b-03b1-4f0a-aa5d-0a805b82dcd9"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  size="lg"
+                  className="hover:text-blue-600 hover:cursor-pointer"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/titanwatchesindia/?sessionId=f99e5b46-2fe9-46f2-95b0-b66f7174f93d.5743f3f6-7c20-4590-821b-0b540f0570d3&jarvisId=4eead67b-03b1-4f0a-aa5d-0a805b82dcd9"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  size="lg"
+                  className="hover:text-pink-600 hover:cursor-pointer"
+                />
+              </a>
+              <a
+                href="https://x.com/titanwatches?sessionId=f99e5b46-2fe9-46f2-95b0-b66f7174f93d.5743f3f6-7c20-4590-821b-0b540f0570d3&jarvisId=4eead67b-03b1-4f0a-aa5d-0a805b82dcd9"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={faXTwitter}
+                  size="lg"
+                  className="hover:text-blue-500 hover:cursor-pointer"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/@titanwatchesindia"
+                target="_blank"
+              >
+                <FontAwesomeIcon
+                  icon={faYoutube}
+                  size="lg"
+                  className="hover:text-red-600 hover:cursor-pointer"
+                />
+              </a>
             </div>
           </div>
         </div>
