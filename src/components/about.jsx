@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
-
-import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,9 +7,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const el = useRef(null);
+
   useGSAP(() => {
-    //panel effect
-    gsap.utils.toArray(".panel").forEach((panel, i) => {
+    // Panel effect
+    gsap.utils.toArray(".about-panel").forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
         start: "top top",
@@ -22,7 +21,7 @@ const About = () => {
   }, []);
 
   useEffect(() => {
-    //types.js
+    // Typed.js effect
     const typed = new Typed(el.current, {
       strings: ["Enhance your elegance.", "Meet our team, know our mission."],
       startDelay: 300,
@@ -33,7 +32,6 @@ const About = () => {
       loop: true,
     });
 
-    // Destroying
     return () => {
       typed.destroy();
     };
@@ -43,16 +41,17 @@ const About = () => {
     <>
       <h1
         ref={el}
-        className="text-3xl lg:text-4xl font-semibold h-[10vh] text-center"
+        className="text-2xl lg:text-4xl font-semibold h-[10vh] text-center mt-12"
       ></h1>
-      <div className="panel flex-col md:flex-row md:h-fit">
-        <div className="team-img">
+      <div className="about-panel flex flex-col md:flex-row md:h-auto gap-4 p-4">
+        <div className="team-img flex-1">
           <img
             src="https://www.titancompany.in/sites/default/files/Overview%20sample%202.png"
             alt="Team Image"
+            className="w-full h-auto"
           />
         </div>
-        <div className="team-details flex flex-col justify-center items-start">
+        <div className="team-details flex flex-col justify-center items-start flex-1 p-4">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Titan Overview
           </h2>
@@ -69,15 +68,15 @@ const About = () => {
         </div>
       </div>
 
-      <div className="panel flex-col md:flex-row items-center md:gap-10 md:h-fit">
-        <div className="about-img">
+      <div className="about-panel flex flex-col md:flex-row items-center md:gap-10 md:h-auto gap-4 p-4">
+        <div className="about-img flex-1">
           <img
             src="/about-watch-img.jpg"
-            className="h-2/3 md:h-3/4"
+            className="w-full h-auto"
             alt="watch image"
           />
         </div>
-        <div className="about-details flex flex-col justify-center items-start">
+        <div className="about-details flex flex-col justify-center items-start flex-1 p-4">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Our Heritage
           </h2>

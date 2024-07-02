@@ -2,7 +2,6 @@
 
 * {
   color: aliceblue;
-  background-color: black;
 }
 .btn {
   color: black;
@@ -11,16 +10,18 @@
   font-size: 1rem;
   font-weight: 500;
 }
-.panel {
+.about-panel {
   max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
   gap: 20px;
+  background-color: black;
 }
-.panel > div {
+.about-panel > div {
   flex: 1;
 }
+
 .icon {
   /*given to one of the social icons*/
   margin: 0 20px;
