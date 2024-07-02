@@ -25,7 +25,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className=" w-full h-5/6 nav-height bg-black flex justify-center items-center">
+      <section className=" w-full h-5/6  nav-height bg-black flex justify-center items-center">
         <div className="background md:w-10/12 w-9/12  object-fit -z-1 absolute overflow-hidden mt-14 contrast-125 backdrop-contrast-200">
           <video autoPlay loop muted className="w-full h-full object-cover">
             <source src="/titan-video.mp4" type="video/mp4" />
