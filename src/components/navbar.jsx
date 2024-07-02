@@ -17,7 +17,6 @@ const Navbar = () => {
               }`}
             >
               {nav}
-              <a href="./highlights"></a>
             </AnchorLink>
           ))}
         </div>
