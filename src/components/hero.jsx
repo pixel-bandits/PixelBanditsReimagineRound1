@@ -31,7 +31,7 @@ const Hero = () => {
             autoPlay
             loop
             muted
-            className=" w-full h-5/6 video-height object-cover overflow-hidden mb-44  md:mb-0"
+            className=" w-full h-5/6 video-height object-fit mb-44  md:mb-0"
           >
             <source src="/titan-video.mp4" type="video/mp4" />
           </video>

@@ -76,7 +76,7 @@ const About = () => {
             alt="watch image"
           />
         </div>
-        <div className="about-details flex flex-col justify-center items-center flex-1">
+        <div className="about-details flex flex-col justify-center items-center h-auto flex-1">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Our Heritage
           </h2>
