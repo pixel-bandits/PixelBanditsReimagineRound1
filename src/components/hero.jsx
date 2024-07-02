@@ -25,19 +25,24 @@ const Hero = () => {
 
   return (
     <>
-      <section className=" w-full h-5/6  nav-height bg-black flex justify-center items-center">
-        <div className="background md:w-10/12 w-9/12  object-fit -z-1 absolute overflow-hidden mt-14 contrast-125 backdrop-contrast-200">
-          <video autoPlay loop muted className="w-full h-full object-cover">
+      <section className=" w-full h-4/6  nav-height bg-black flex justify-center items-center">
+        <div className="background md:w-10/12 w-9/12   object-fit -z-1 absolute overflow-hidden  contrast-125 backdrop-contrast-200">
+          <video
+            autoPlay
+            loop
+            muted
+            className=" w-full h-5/6 video-height object-fit mb-44  md:mb-0"
+          >
             <source src="/titan-video.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="w-full h-full flex justify-center items-end pb-10">
+        <div className="w-full h-full flex justify-center items-end pb-24 md:pb-8">
           <h1
             ref={textRef}
             className="text-white font-playfair text-5xl md:text-5xl lg:text-6xl xl:text-8xl"
           >
-            <span className="block md:inline">TITAN</span>{" "}
-            <span className="block md:inline">WORLD</span>
+            <span className="block inline">TITAN</span>{" "}
+            <span className="block inline">WORLD</span>
           </h1>
         </div>
       </section>
