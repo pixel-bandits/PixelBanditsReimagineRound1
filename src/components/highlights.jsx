@@ -97,7 +97,7 @@ function Highlights() {
       >
         {imageSection}
       </section>
-      <section className="w-full min-h-screen"></section>
+      <section className="w-full min-h-1/2"></section>
     </main>
   );
 }
