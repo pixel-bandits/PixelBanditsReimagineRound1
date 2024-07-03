@@ -9,7 +9,6 @@ const About = () => {
   const el = useRef(null);
 
   useGSAP(() => {
-    // Panel effect
     gsap.utils.toArray(".about-panel").forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
