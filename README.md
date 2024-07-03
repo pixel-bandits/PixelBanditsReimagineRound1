@@ -1,8 +1,11 @@
-# React + Vite
+## Titan Reimagined Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Titan Reimagined! Titan is a renowned watch brand known for its quality, craftsmanship, and innovative designs. This website is designed to showcase the wide range of Titan watches and provide products information. The webpage also showcase the brilliant minds behind the leading watch brand.
 
-Currently, two official plugins are available:
+### Technologies used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. ReactJS
+2. GSAP
+3. Tailwind CSS
+
+The site is deployed using Render.com.
