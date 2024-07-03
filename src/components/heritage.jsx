@@ -75,7 +75,7 @@ const Heritage = () => {
         <div id="top" className="h-2/4 w-full absolute top-0 overflow-hidden">
           <h1
             id="top-h1"
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-9xl absolute tracking-widest bottom-0 left-2/4 -translate-x-2/4 translate-y-2/4"
+            className="text-5xl sm:text-5xl md:text-6xl lg:text-9xl absolute tracking-widest bottom-0 left-2/4 -translate-x-2/4 translate-y-2/4"
           >
             HERITAGE
           </h1>
@@ -88,7 +88,7 @@ const Heritage = () => {
             id="center-gif"
             src="heritage.gif"
             alt="Animated Gif"
-            className="w-3/4 h-auto max-h-full object-contain"
+            className="w-3/4 h-auto max-h-full  object-contain"
           />
         </div>
         <div
@@ -97,7 +97,7 @@ const Heritage = () => {
         >
           <h1
             id="bottom-h1"
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-9xl top-0 tracking-widest left-2/4 -translate-y-2/4 -translate-x-2/4 absolute"
+            className="text-5xl sm:text-5xl md:text-6xl lg:text-9xl top-0 tracking-widest left-2/4 -translate-y-2/4 -translate-x-2/4 absolute"
           >
             HERITAGE
           </h1>
