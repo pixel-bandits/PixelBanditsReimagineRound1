@@ -2,7 +2,7 @@ import Lenis from "@studio-freight/lenis";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { imageDetails } from "../constants/index.js";
+import { imageDetails } from "../constants/index.js"; // Adjust the path as needed
 
 function Highlights() {
   const imageRef = useRef([]);
@@ -85,9 +85,9 @@ function Highlights() {
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
-  }, [imageRef.current.length]);
+  }, []);
 
-  // Lenis smooth scrolling (unchanged)
+  // lenis
   const lenis = new Lenis();
   lenis.on("scroll", () => {});
 
@@ -106,10 +106,11 @@ function Highlights() {
       </section>
       <p className="text-center text-white mt-6 text-lg md:text-xl lg:text-2xl leading-relaxed font-light tracking-wide px-4 lg:px-20">
         <span className="block font-semibold text-2xl md:text-3xl mb-2">
-          Crafted for Excellence
+          Discover Our Collection
         </span>
-        our watches embody meticulous craftsmanship and timeless design,
-        ensuring every piece reflects precision and sophistication
+        of elegant and finely crafted watches. Elevate your style with pieces
+        that are more than just timekeepers; they're statements of
+        sophistication.
       </p>
       <section
         className="flex flex-nowrap items-start overflow-x-hidden py-10 mx-8"

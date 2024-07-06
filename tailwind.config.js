@@ -13,6 +13,9 @@ export default {
         },
         zinc: "#101010",
       },
+      backgroundImage: {
+        "nav-bg": "url('./bg-nav.jpg')",
+      },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         cormorant: ["Cormorant SC", "serif"],
