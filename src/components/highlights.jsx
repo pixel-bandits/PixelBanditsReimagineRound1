@@ -3,13 +3,15 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { imageDetails } from "../constants/index.js";
+
 function Highlights() {
   const imageRef = useRef([]);
   const imageContainerRef = useRef();
+
   const imageSection = imageDetails.map((image, index) => (
     <div
       key={index}
-      className="w-[90vw] sm:w-[60vh] md:w-[66vh] lg:w-[64vh] h-[45vh] sm:h-[55vh] md:h-[64vh] lg:h-[64vh] shrink-0 rounded-3xl  overflow-hidden relative mx-4"
+      className="w-[90vw] sm:w-[60vh] md:w-[66vh] lg:w-[64vh] h-[45vh] sm:h-[55vh] md:h-[64vh] lg:h-[64vh] shrink-0 rounded-3xl overflow-hidden relative mx-4"
       ref={(ref) => (imageRef.current[index] = ref)}
     >
       <img
@@ -22,7 +24,9 @@ function Highlights() {
       </div>
     </div>
   ));
+
   gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
     if (imageRef.current.length > 0) {
       const totalWidth = imageRef.current.reduce(
@@ -32,6 +36,7 @@ function Highlights() {
       const extraScroll =
         window.innerWidth -
         imageRef.current[imageRef.current.length - 1].offsetWidth;
+
       gsap.to(imageRef.current, {
         x: () => -(totalWidth - extraScroll),
         ease: "none",
@@ -59,34 +64,41 @@ function Highlights() {
           },
         },
       });
+
       // Hover animation (unchanged)
       imageRef.current.forEach((ref) => {
         if (ref) {
           const info = ref.querySelector(".info");
           gsap.set(info, { opacity: 0 });
+
           ref.addEventListener("mouseenter", () => {
             gsap.to(info, { opacity: 1, duration: 0.3, ease: "power2.inOut" });
           });
+
           ref.addEventListener("mouseleave", () => {
             gsap.to(info, { opacity: 0, duration: 0.3, ease: "power2.inOut" });
           });
         }
       });
     }
+
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, [imageRef.current.length]);
+
   // Lenis smooth scrolling (unchanged)
   const lenis = new Lenis();
   lenis.on("scroll", () => {});
+
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+
   return (
-    <main className="bg-black w-full overflow-x-hidden relative cursor-grab">
+    <main className="bg-black w-full overflow-x-hidden relative">
       <section className="flex justify-center items-center p-6">
         <h1 className="font-bold text-6xl  md:text-8xl text-white font-cormorant">
           Highlights
@@ -94,14 +106,13 @@ function Highlights() {
       </section>
       <p className="text-center text-white mt-6 text-lg md:text-xl lg:text-2xl leading-relaxed font-light tracking-wide px-4 lg:px-20">
         <span className="block font-semibold text-2xl md:text-3xl mb-2">
-          Discover Our Collection
+          Crafted for Excellence
         </span>
-        of elegant and finely crafted watches. Elevate your style with pieces
-        that are more than just timekeepers; they're statements of
-        sophistication.
+        our watches embody meticulous craftsmanship and timeless design,
+        ensuring every piece reflects precision and sophistication
       </p>
       <section
-        className="flex flex-nowrap items-start overflow-x-hidden py-10 mx-8 cursor-none"
+        className="flex flex-nowrap items-start overflow-x-hidden py-10 mx-8"
         ref={imageContainerRef}
       >
         {imageSection}
@@ -110,4 +121,5 @@ function Highlights() {
     </main>
   );
 }
+
 export default Highlights;
