@@ -86,7 +86,7 @@ const Navbar = ({ scrollToAbout, scrollToHighlights, scrollToFooter }) => {
         )}
         {/* Shop icon for larger screens */}
         <div className="hidden md:flex flex-1 justify-end items-end">
-          <img src="./shop white.jpg" alt="Shop Icon" className="h-12 w-14 " />
+          <img src="/shop white.jpg" alt="Shop Icon" className="h-12 w-14 " />
         </div>
       </nav>
     </header>
