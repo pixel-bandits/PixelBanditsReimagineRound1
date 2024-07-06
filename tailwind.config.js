@@ -17,6 +17,7 @@ export default {
         playfair: ["Playfair Display", "serif"],
         cormorant: ["Cormorant SC", "serif"],
         arvo: ["Arvo", "serif"],
+        poppins: ["Poppins", "serif"],
       },
       screens: {
         tablet: "640px",

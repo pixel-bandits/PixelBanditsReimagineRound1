@@ -1,5 +1,5 @@
+import React, { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { imageDetails } from "../constants/index.js";
@@ -11,7 +11,7 @@ function Highlights() {
   const imageSection = imageDetails.map((image, index) => (
     <div
       key={index}
-      className="w-[90vw] sm:w-[60vh] md:w-[66vh] lg:w-[64vh] h-[45vh] sm:h-[55vh] md:h-[64vh] lg:h-[64vh] shrink-0 rounded-3xl overflow-hidden relative mx-4"
+      className="w-[60vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw] h-[60vh] sm:h-[60vh] md:h-[60vh] lg:h-[70vh] shrink-0 rounded-3xl overflow-hidden relative mx-4"
       ref={(ref) => (imageRef.current[index] = ref)}
     >
       <img
@@ -33,12 +33,9 @@ function Highlights() {
         (acc, img) => acc + img.offsetWidth,
         0
       );
-      const extraScroll =
-        window.innerWidth -
-        imageRef.current[imageRef.current.length - 1].offsetWidth;
 
       gsap.to(imageRef.current, {
-        x: () => -(totalWidth - extraScroll),
+        x: () => -(totalWidth - window.innerWidth),
         ease: "none",
         scrollTrigger: {
           trigger: imageContainerRef.current,
@@ -47,25 +44,10 @@ function Highlights() {
           scrub: 1,
           pin: true,
           anticipatePin: 1,
-          snap: {
-            snapTo: (progress) => {
-              const snapPoints = imageRef.current.map(
-                (_, index) => index / (imageRef.current.length - 1)
-              );
-              return snapPoints.reduce((prev, curr) =>
-                Math.abs(curr - progress) < Math.abs(prev - progress)
-                  ? curr
-                  : prev
-              );
-            },
-            duration: { min: 0.2, max: 0.3 },
-            delay: 0.1,
-            ease: "power1.inOut",
-          },
         },
       });
 
-      // Hover animation (unchanged)
+      // Hover animation
       imageRef.current.forEach((ref) => {
         if (ref) {
           const info = ref.querySelector(".info");
@@ -87,7 +69,7 @@ function Highlights() {
     };
   }, [imageRef.current.length]);
 
-  // Lenis smooth scrolling (unchanged)
+  // Lenis smooth scrolling
   const lenis = new Lenis();
   lenis.on("scroll", () => {});
 
@@ -100,7 +82,7 @@ function Highlights() {
   return (
     <main className="bg-black w-full overflow-x-hidden relative cursor-grab">
       <section className="flex justify-center items-center p-6">
-        <h1 className="font-bold text-6xl  md:text-8xl text-white font-cormorant">
+        <h1 className="font-bold text-6xl md:text-8xl text-white font-cormorant">
           Highlights
         </h1>
       </section>
@@ -113,7 +95,7 @@ function Highlights() {
         sophistication.
       </p>
       <section
-        className="flex flex-nowrap items-start overflow-x-hidden py-10 mx-8 cursor-none"
+        className="flex flex-nowrap items-start overflow-x-hidden py-10 mx-8"
         ref={imageContainerRef}
       >
         {imageSection}

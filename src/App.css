@@ -3,6 +3,16 @@
 * {
   /* color: aliceblue; */
 }
+.overlay-nav {
+  background-image: url(https://images.unsplash.com/photo-1509295433237-4b4851f2ab67?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: full;
+  overflow: hidden;
+  background-position: center;
+  position: fixed;
+}
 .btn {
   color: black;
   background-color: #8b8de7;
@@ -50,7 +60,7 @@ li {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(139, 141, 231);
+  background: #8b8de7;
 }
 
 /* Handle on hover */
