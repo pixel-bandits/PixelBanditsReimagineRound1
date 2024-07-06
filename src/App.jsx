@@ -8,6 +8,7 @@ import Hero from "./components/hero";
 import Navbar from "./components/navbar";
 import Heritage from "./components/heritage";
 import Highlights from "./components/highlights";
+import Products from "./components/products";
 const App = () => {
   const aboutRef = useRef(null);
   const productsRef = useRef(null);
@@ -48,11 +49,12 @@ const App = () => {
       <div ref={aboutRef}>
         <About />
       </div>
+
+      <Highlights />
       <Heritage />
       <div ref={productsRef}>
-        <Highlights />
+        <Products />
       </div>
-
       <div ref={footerRef}>
         <Footer />
       </div>

@@ -34,3 +34,54 @@ export const imageDetails = [
     info: "Titan Raga Viva Silver Dial Women Watch With Metal Strap",
   },
 ];
+export const products = [
+  {
+    title: "Fastrack Vivid Pro ",
+    desc: "Smart dial Silicone Strap Watch, amoled display.",
+    price: "₹ 3,995.00",
+    image: "/images/prod3.webp",
+  },
+  {
+    title: "Fastrack Phantom",
+    desc: " 4.69 CM Super HD Display Solar Metal Smartwatch",
+    price: "₹ 3,995.00",
+    image: "/images/prod1.webp",
+  },
+  {
+    title: "Reflex Play",
+    desc: "Amoled Display, Sleek Design and Health Suite.",
+    price: "₹ 2,999.00",
+    image: "/images/prod2.webp",
+  },
+  {
+    title: "Titan Raga Showstopper",
+    desc: " Quartz Analog White Dial Metal Strap Watch.",
+    price: " ₹ 5,495.00",
+    image: "/images/prod4.webp",
+  },
+  {
+    title: "Fastrack Xtreme Pro",
+    desc: "3.6 cm AMOLED Display, SingleSync BT Calling.",
+    price: "₹ 3,999.00",
+    image: "/images/prod6.webp",
+  },
+  {
+    title: "Kenneth Cole Quartz",
+    desc: " Analog Brown Dial Stainless Steel Strap Watch.",
+    price: "₹ 12,750.00",
+    image: "/images/prod5.webp",
+  },
+
+  {
+    title: "Titan Crest ",
+    desc: "3.63 cm AMOLED Display with AOD,BT Calling Smartwatch.",
+    price: "₹ 6,995.00",
+    image: "/images/prod7.webp",
+  },
+  {
+    title: "Titan Talk Touch Screen",
+    desc: "BT Calling, AI- Voice Assistant, and Amoled Display.",
+    price: "₹ 9,995.00",
+    image: "/images/prod8.webp",
+  },
+];
