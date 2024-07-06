@@ -98,7 +98,7 @@ function Highlights() {
   requestAnimationFrame(raf);
 
   return (
-    <main className="bg-black w-full overflow-x-hidden relative">
+    <main className="bg-black w-full overflow-x-hidden relative cursor-grab">
       <section className="flex justify-center items-center p-6">
         <h1 className="font-bold text-6xl  md:text-8xl text-white font-cormorant">
           Highlights
@@ -113,7 +113,7 @@ function Highlights() {
         sophistication.
       </p>
       <section
-        className="flex flex-nowrap items-start overflow-x-hidden py-10 mx-8"
+        className="flex flex-nowrap items-start overflow-x-hidden py-10 mx-8 cursor-none"
         ref={imageContainerRef}
       >
         {imageSection}

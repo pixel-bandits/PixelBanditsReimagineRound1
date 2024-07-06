@@ -7,7 +7,7 @@ const Navbar = ({ scrollToAbout, scrollToHighlights, scrollToFooter }) => {
       <nav className="flex w-full screen-max-width z-[999]">
         <img src="./titan white logo.jpg" alt="" className="h-12 w-18" />
 
-        <div className="flex flex-1 justify-center items-center max-sm:hidden">
+        <div className="flex flex-1 justify-center items-center max-sm:hidden ">
           {navLists.map((nav, index) => (
             <button
               onClick={() => {
@@ -16,7 +16,7 @@ const Navbar = ({ scrollToAbout, scrollToHighlights, scrollToFooter }) => {
                 if (nav === "Support") scrollToFooter();
               }}
               key={index}
-              className={`px-5 text-nase cursor-pointer text-gray hover:text-white transition-all  ${
+              className={`px-5 text-nase cursor-pointer text-white  hover:text-amber-500 transition-all  ${
                 index === 4 && "ml-80 "
               }`}
             >

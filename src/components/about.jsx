@@ -40,17 +40,17 @@ const About = () => {
     <>
       <h1
         ref={el}
-        className="text-2xl lg:text-4xl font-semibold h-[10vh] text-center mt-14 "
+        className="text-2xl lg:text-4xl font-semibold h-[10vh] text-center mt-14 cursor-text"
       ></h1>
       <div className="about-panel flex flex-col sm:flex-row sm:h-auto mb-16 items-center p-4 bg-black">
-        <div className="team-img flex justify-center">
+        <div className="team-img flex justify-cente cursor-none">
           <img
             src="https://www.titancompany.in/sites/default/files/Overview%20sample%202.png"
             alt="Team Image"
             className="w-4/5 object-center"
           />
         </div>
-        <div className="team-details flex flex-col justify-start mb-10 h-auto items-center flex-1 p-4">
+        <div className="team-details flex flex-col justify-start mb-10 h-auto items-center flex-1 p-4 cursor-text">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Titan Overview
           </h2>
@@ -64,14 +64,14 @@ const About = () => {
       </div>
 
       <div className="about-panel flex flex-col sm:flex-row items-center justify-center sm:gap-10 h-auto mb-16 gap-4 p-6 bg-black">
-        <div className="about-img flex-1  flex justify-center bg-black">
+        <div className="about-img flex-1  flex justify-center bg-black cursor-none">
           <img
             src="/about-watch-img.jpg"
             className="w-1/2 md:w-full"
             alt="watch image"
           />
         </div>
-        <div className="about-details flex flex-col justify-center items-center h-auto flex-1 bg-black">
+        <div className="about-details flex flex-col justify-center items-center h-auto flex-1 bg-black cursor-text">
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Our Heritage
           </h2>

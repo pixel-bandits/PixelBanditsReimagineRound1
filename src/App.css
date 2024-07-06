@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap");
 
 * {
-  color: aliceblue;
+  /* color: aliceblue; */
 }
 .btn {
   color: black;
@@ -11,6 +11,7 @@
   font-weight: 500;
 }
 .about-panel {
+  color: aliceblue;
   max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
@@ -23,6 +24,7 @@
 } */
 
 .icon {
+  color: white;
   /*given to one of the social icons*/
   margin: 0 20px;
 }
