@@ -54,7 +54,7 @@ const About = () => {
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Titan Overview
           </h2>
-          <div className=" text-justify mb-10">
+          <div className=" text-justify mb-10 first-letter:text-3xl ">
             Titan is India's leading lifestyle company and among the most
             admired and respected corporates in the country. Titan has come a
             long way since 1984 when we started with one product category.
@@ -75,7 +75,7 @@ const About = () => {
           <h2 className="section-heading text-xl font-semibold lg:text-3xl">
             Our Heritage
           </h2>
-          <div className="mb-10  text-justify bg-black">
+          <div className="mb-10  text-justify bg-black first-letter:text-3xl">
             A journey of over 30 years that saw Titan Watch Project becoming
             Titan Watches, to Titan Industries, and to what’s today known as the
             Titan Company Limited. With hitting the 15 million mark every year
