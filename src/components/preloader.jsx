@@ -43,7 +43,7 @@ const Preloader = ({ onLoadingComplete }) => {
 
   return (
     <div className="preloader flex flex-col items-center justify-center h-screen bg-black">
-      <h1 className="text-amber-500 leading-normal  font-arvo text-4xl md:text-4xl lg:text-6xl xl:text-8xl overflow-hidden mb-4">
+      <h1 className="text-amber-500 font-arvo leading-normal tracking-wide text-3xl md:text-3xl lg:text-6xl xl:text-8xl overflow-hidden mb-4">
         {text}
       </h1>
       <div className="w-48 h-1 bg-amber-900 rounded-full overflow-hidden">

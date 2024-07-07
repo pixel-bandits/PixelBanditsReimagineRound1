@@ -165,9 +165,9 @@ li {
 }
 
 .subtext {
-  font-size: 1.5rem; /* Smaller font size */
-  text-transform: none; /* Ensure it's not uppercase */
-  margin-top: 1rem; /* Space between the main text and subtext */
+  font-size: 1.5rem;
+  text-transform: none;
+  margin-top: 1rem;
   color: var(--color-lighter);
 }
 
@@ -179,9 +179,4 @@ li {
   background-color: #000;
   color: #fff;
   font-family: "Arial", sans-serif;
-}
-
-.preloader h1 {
-  font-size: 4rem;
-  letter-spacing: 0.5rem;
 }
