@@ -61,7 +61,7 @@ const Navbar = ({ scrollToAbout, scrollToHighlights, scrollToFooter }) => {
         </div>
         {/* Mobile menu overlay */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-zinc-900 overlay-nav z-50 flex flex-col items-start justify-center p-6">
+          <div className="fixed inset-0 bg-zinc-900 overlay-nav bg-background z-50 flex flex-col items-start justify-center p-6">
             <button
               onClick={toggleMenu}
               className="absolute top-4 right-4 text-white text-2xl"
@@ -86,7 +86,7 @@ const Navbar = ({ scrollToAbout, scrollToHighlights, scrollToFooter }) => {
         )}
         {/* Shop icon for larger screens */}
         <div className="hidden md:flex flex-1 justify-end items-end">
-          <img src="./shop white.jpg" alt="Shop Icon" className="h-12 w-14 " />
+          <img src="/shop white.jpg" alt="Shop Icon" className="h-12 w-14 " />
         </div>
       </nav>
     </header>

@@ -2,7 +2,7 @@ import Lenis from "@studio-freight/lenis";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { imageDetails } from "../constants/index.js";
+import { imageDetails } from "../constants/index.js"; // Adjust the path as needed
 
 function Highlights() {
   const imageRef = useRef([]);
@@ -85,9 +85,9 @@ function Highlights() {
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
-  }, [imageRef.current.length]);
+  }, []);
 
-  // Lenis smooth scrolling (unchanged)
+  // lenis
   const lenis = new Lenis();
   lenis.on("scroll", () => {});
 
