@@ -3,6 +3,7 @@
 * {
   /* color: aliceblue; */
 }
+
 .overlay-nav {
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,6 +19,10 @@
   padding: 10px 25px;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.title h1 {
+  font-size: 42 rem;
 }
 .about-panel {
   color: aliceblue;
@@ -44,6 +49,24 @@
   color: #8b8de7;
   cursor: pointer;
 }
+.image-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 300px; /* Adjust based on your container's height */
+}
+
+.image {
+  height: 50px; /* Adjust based on your image's height */
+  width: 50px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 li {
   margin: 15px 0;
 }
@@ -65,4 +88,100 @@ li {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(93, 95, 214);
+}
+.hero {
+  text-transform: uppercase;
+  font-size: 10vw;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--color-darker);
+  min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.titan,
+.world {
+  position: relative;
+}
+
+.titan span,
+.world span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-lighter);
+}
+
+.photos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.photo {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  aspect-ratio: 1;
+}
+.photo.one {
+  grid-column: 1;
+  grid-row: 2;
+}
+.photo.two {
+  grid-column: 4;
+  grid-row: 3;
+}
+.photo.three {
+  grid-column: 2;
+  grid-row: 5;
+}
+.photo.four {
+  grid-column: 7;
+  grid-row: 4;
+}
+.photo.five {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+.subtext {
+  font-size: 1.5rem; /* Smaller font size */
+  text-transform: none; /* Ensure it's not uppercase */
+  margin-top: 1rem; /* Space between the main text and subtext */
+  color: var(--color-lighter);
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+.preloader h1 {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
 }
