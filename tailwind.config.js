@@ -14,7 +14,7 @@ export default {
         zinc: "#101010",
       },
       backgroundImage: {
-        background: "url('/navigation.jpg')",
+        background: "url('/navigation.webP')",
       },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],

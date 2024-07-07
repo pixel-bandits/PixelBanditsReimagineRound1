@@ -1,107 +1,79 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import SplitType from "split-type";
-gsap.registerPlugin(ScrollTrigger);
+import { useRef } from "react";
+import {
+  useGsapShutterUnveil,
+  useGsapPhotoScroller,
+  useGsapPhotoLevitate,
+} from "../hooks/gsap";
+
 const Hero = () => {
-  const textRef = useRef();
-  const splitTextRef = useRef(null);
-  useEffect(() => {
-    splitTextRef.current = new SplitType(textRef.current, {
-      types: "chars",
-      tagName: "span",
-    });
-    const chars = splitTextRef.current.chars;
-    gsap.set(chars, {
-      yPercent: -120,
-      opacity: 0,
-    });
-    gsap.to(chars, {
-      duration: 1,
-      yPercent: 0,
-      opacity: 1,
-      stagger: 0.05,
-      ease: "power4.out",
-    });
-    gsap.fromTo(
-      textRef.current,
-      { filter: "blur(20px)" },
-      { filter: "blur(0px)", duration: 2, ease: "power2.out" }
-    );
-    gsap.fromTo(
-      textRef.current,
-      { clipPath: "inset(50% 0% 50% 0%)" },
-      { clipPath: "inset(0% 0% 0% 0%)", duration: 1.5, ease: "power4.inOut" }
-    );
-    // Fluid and foggy hover effect
-    const createFluidFoggyEffect = () => {
-      let isHovering = false;
-      chars.forEach((char, index) => {
-        char.addEventListener("mouseover", () => {
-          isHovering = true;
-          gsap.to(chars, {
-            y: (i) => Math.sin((i - index) * 0.5) * 20,
-            filter: "blur(1.5px) brightness(1.1)",
-            duration: 0.4,
-            ease: "power2.out",
-          });
-        });
-      });
-      textRef.current.addEventListener("mouseleave", () => {
-        isHovering = false;
-        gsap.to(chars, {
-          y: 0,
-          filter: "blur(0px) brightness(1)",
-          duration: 0.4,
-          ease: "power2.out",
-        });
-      });
-      // Animate fog effect continuously while hovering
-      gsap.ticker.add(() => {
-        if (isHovering) {
-          chars.forEach((char, i) => {
-            gsap.to(char, {
-              filter: `blur(${
-                2 + Math.sin(Date.now() * 0.01 + i * 0.5) * 1
-              }px) brightness(${
-                1.1 + Math.sin(Date.now() * 0.01 + i * 0.5) * 0.05
-              })`,
-              duration: 0.1,
-            });
-          });
-        }
-      });
-    };
-    createFluidFoggyEffect();
-    return () => {
-      // Cleanup
-      if (splitTextRef.current) {
-        splitTextRef.current.revert();
-      }
-    };
-  }, []);
+  const heroRef = useRef(null);
+  const shutter1 = useRef(null);
+  const shutter2 = useRef(null);
+  const photo1Ref = useRef(null);
+  const photo2Ref = useRef(null);
+  const photo3Ref = useRef(null);
+  const photo4Ref = useRef(null);
+  const photo5Ref = useRef(null);
+
+  const photosArr = [photo1Ref, photo2Ref, photo3Ref, photo4Ref, photo5Ref];
+
+  useGsapShutterUnveil(shutter1, 0, heroRef);
+  useGsapShutterUnveil(shutter2, 0.3, heroRef);
+  useGsapPhotoScroller(photosArr);
+  useGsapPhotoLevitate(photosArr, heroRef);
+
   return (
-    <section className="w-full h-4/6 nav-height bg-black flex justify-center items-center relative overflow-hidden">
-      <div className="background md:w-10/12 w-9/12 absolute -z-1 overflow-hidden contrast-125 backdrop-contrast-200">
-        <video
-          autoPlay
-          loop
-          muted
-          className="w-full h-5/6 video-height object-fit mb-44 md:mb-0"
-        >
-          <source src="/titan-video.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className="w-full h-full flex justify-center items-end pb-24 md:pb-8 relative z-10">
-        <h1
-          ref={textRef}
-          className="text-amber-500 font-semibold font-playfair text-5xl md:text-5xl lg:text-6xl xl:text-8xl overflow-hidden cursor-zoom-in"
-        >
-          <span className="inline block">TITAN</span>{" "}
-          <span className="inline block">WORLD</span>
+    <section className="hero wrapper" ref={heroRef}>
+      <div className=" text-amber-500 font-bold leading-normal tracking-widest font-playfair text-5xl md:text-5xl lg:text-6xl xl:text-8xl overflow-hidden cursor-zoom-in">
+        <h1 className="titan">
+          TITAN <span ref={shutter1}></span>
         </h1>
+        <h1 className="world">
+          WORLD <span ref={shutter2}></span>
+        </h1>
+      </div>
+      <p className="subtext font-arvo ">
+        Timeless Precision, Unmatched Elegance
+      </p>
+      <div className="photos">
+        <div
+          ref={photo1Ref}
+          className="photo one"
+          style={{
+            backgroundImage: 'url("/images/5.jpg")',
+          }}
+        ></div>
+        <div
+          ref={photo2Ref}
+          className="photo two"
+          style={{
+            backgroundImage: 'url("/images/1.jpg")',
+          }}
+        ></div>
+        <div
+          ref={photo3Ref}
+          className="photo three"
+          style={{
+            backgroundImage: 'url("/images/3.jpg")',
+          }}
+        ></div>
+        <div
+          ref={photo4Ref}
+          className="photo four"
+          style={{
+            backgroundImage: 'url("/images/prod5.webp")',
+          }}
+        ></div>
+        <div
+          ref={photo5Ref}
+          className="photo five"
+          style={{
+            backgroundImage: 'url("/images/8.jpg")',
+          }}
+        ></div>
       </div>
     </section>
   );
 };
+
 export default Hero;

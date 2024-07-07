@@ -28,7 +28,7 @@ const Navbar = ({ scrollToAbout, scrollToHighlights, scrollToFooter }) => {
     };
   }, [isMenuOpen]);
   return (
-    <header className=" w-full pt-5 sm:px-10 px-5 flex justify-between items-center bg-zinc-900 font-poppins">
+    <header className=" w-full pt-5 sm:px-10 px-5 flex flex-1 justify-between items-center bg-zinc-900 font-poppins">
       <nav className="flex sticky z-999 top-0 w-full screen-max-width z-[999] ">
         <img
           src="./titan white logo.jpg"
