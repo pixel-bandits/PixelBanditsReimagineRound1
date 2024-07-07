@@ -77,7 +77,7 @@ const Footer = () => {
                 <FontAwesomeIcon
                   icon={faFacebook}
                   size="lg"
-                  className="hover:text-blue-600 hover:cursor-pointer"
+                  className="hover:text-cyan-700 hover:cursor-pointer"
                 />
               </a>
               <a
@@ -97,7 +97,7 @@ const Footer = () => {
                 <FontAwesomeIcon
                   icon={faXTwitter}
                   size="lg"
-                  className="hover:text-blue-500 hover:cursor-pointer"
+                  className="hover:text-red-600 hover:cursor-pointer"
                 />
               </a>
               <a
