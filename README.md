@@ -11,5 +11,7 @@ Dive into the world of Titan through a crisp scroll journey.
 1. ReactJS
 2. GSAP
 3. Tailwind CSS
+4. Lenis
+5. Typed JS
 
 The site is deployed using Render.com.
