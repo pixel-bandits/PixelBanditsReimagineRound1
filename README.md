@@ -1,6 +1,10 @@
 ## Titan Reimagined Website
 
-Welcome to Titan Reimagined! Titan is a renowned watch brand known for its quality, craftsmanship, and innovative designs. This website is designed to showcase the wide range of Titan watches and provide products information. The webpage also showcase the brilliant minds behind the leading watch brand.
+Introducing Titan Reimagined! A sleek, digital experience built with React, Tailwind CSS, and GSAP.
+This webpage is built with great attention to detail and smooth animations. We made use of Scrolltrigger to create intuitive scroll animations, backed with Lenis for seamless scrolling. 
+Our idea was to revamp Titan with a minimalist design approach. The coding journey had been quite challenging yet fun! 
+
+Dive into the world of Titan through a crisp scroll journey.
 
 ### Technologies used
 
