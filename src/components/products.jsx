@@ -43,8 +43,8 @@ const Products = () => {
   };
   return (
     <div className="w-screen p-3 md:p-10 lg:p-20 z-20">
-      <h1 className="text-6xl text-center md:text-right md:text-7xl lg:text-9xl mb-5 md:mb-10 z-20">
-        <span className="text-orange-500">D</span>ISCOVER OUR COLLECTIO
+      <h1 className="text-6xl text-center md:text-right md:text-7xl lg:text-8xl mb-5 md:mb-10 z-20">
+        <span className="text-orange-500">D</span>ISCOVER OUR <br /> COLLECTIO
         <span className="text-orange-500">N</span>
       </h1>
       <Slider {...settings}>
