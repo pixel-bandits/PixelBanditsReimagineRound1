@@ -106,11 +106,10 @@ function Highlights() {
       </section>
       <p className="text-center text-white mt-6 text-lg md:text-xl lg:text-2xl leading-relaxed font-light tracking-wide px-4 lg:px-20">
         <span className="block font-semibold text-2xl md:text-3xl mb-2">
-          Discover Our Collection
+          Crafted for Excellence
         </span>
-        of elegant and finely crafted watches. Elevate your style with pieces
-        that are more than just timekeepers; they're statements of
-        sophistication.
+        our watches embody meticulous craftsmanship and timeless design,
+        ensuring every piece reflects precision and sophistication
       </p>
       <section
         className="flex flex-nowrap items-start overflow-x-hidden py-10 mx-8"
