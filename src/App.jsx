@@ -32,7 +32,6 @@ const App = () => {
   }, []);
 
   function scrollToAbout() {
-    console.log("about scrolled");
     let pos = aboutRef.current.getBoundingClientRect().top;
     window.scrollTo({
       top: pos,
@@ -40,7 +39,6 @@ const App = () => {
     });
   }
   function scrollToHighlights() {
-    console.log("highlights scrolled");
     let pos = productsRef.current.getBoundingClientRect().top;
     window.scrollTo({
       top: pos,
@@ -48,7 +46,6 @@ const App = () => {
     });
   }
   function scrollToFooter() {
-    console.log("footer scrolled");
     let pos = footerRef.current.getBoundingClientRect().top;
     window.scrollTo({
       top: pos,
