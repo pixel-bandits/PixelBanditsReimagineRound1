@@ -10,18 +10,15 @@ const Navbar = ({ scrollToAbout, scrollToHighlights, scrollToFooter }) => {
     const scrollPosition = window.scrollY;
 
     if (isMenuOpen) {
-      // document.body.style.overflowY = "hidden";
       body.style.position = "fixed";
       body.style.top = `-${scrollPosition}px`;
       body.style.width = "100%";
     } else {
-      // document.body.style.overflowY = "auto";
       body.style.position = "";
       body.style.top = "";
       window.scrollTo(0, scrollPosition);
     }
     return () => {
-      // document.body.style.overflowY = "auto";
       body.style.position = "";
       body.style.top = "";
       window.scrollTo(0, scrollPosition);

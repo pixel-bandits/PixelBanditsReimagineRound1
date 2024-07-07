@@ -20,7 +20,6 @@ const About = () => {
   }, []);
 
   useEffect(() => {
-    // Typed.js effect
     const typed = new Typed(el.current, {
       strings: ["Enhance your elegance.", "Meet our team, know our mission."],
       startDelay: 300,
